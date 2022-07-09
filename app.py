@@ -1,9 +1,9 @@
 import streamlit as st
 import joblib
-model = joblib.load('Weather Prediction')
-st.title('WEATHER PREDICTOR')
-ip = st.text_input('Enter a Year')
-op = model.predict([[ip]])
+model = joblib.load('spam-ham')
+st.title('SPAM-HAM CLASSIFIER')
+ip = st.text_input('Enter the Message')
+op = model.predict([ip])
 if st.button('Predict'):
   st.title(op[0])
   #st.title(op[0])
